@@ -1,0 +1,7 @@
+FROM bellsoft/liberica-openjdk-alpine
+COPY ./java ./src
+RUN mkdir ./out
+RUN javac -sourcepath ./src -d out src/com/rafael/lessonjava/Lessonjava.java
+CMD java -classpath ./out com.rafael.lessonjava.Lessonjava
+
+#CMD ["/bin/sh"]
